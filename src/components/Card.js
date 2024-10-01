@@ -6,7 +6,11 @@ function Card({ logements }) {
   return (
     <div className="card-grid">
       {logements.map(logement => (
-        <Vignette key={logement.id} title={logement.title} cover={logement.cover} />
+        <Vignette 
+          key={logement.id} 
+          id={logement.id}
+          title={logement.title} 
+          cover={logement.cover} />
       ))}
     </div>
   );

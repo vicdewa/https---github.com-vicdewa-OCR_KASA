@@ -1,0 +1,65 @@
+/* Conteneur général */
+.collapse-container {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 1023px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+/* Barre d'en-tête cliquable */
+.collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ff6060;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+}
+
+.collapse-header h3 {
+    margin: 0;
+}
+  
+/* Chevron qui pivote */
+.collapse-chevron {
+    font-size: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+    position: absolute; 
+    right: 20px;
+    top: 50%;    
+}
+  
+/* Rotation du chevron quand ouvert */
+.collapse-chevron.open {
+    transform: rotate(180deg); /* Chevron pointe vers le bas */
+}
+  
+/* Contenu du volet */
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+  
+/* Lorsque le contenu est ouvert */
+.collapse-content.open {
+    max-height: 200px; 
+    padding: 20px;
+    background-color: #F6F6F6;
+}
+  
+.collapse-content p {
+    margin: 0;
+    font-size: 16px;
+}
+  
