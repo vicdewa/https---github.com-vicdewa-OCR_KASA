@@ -1,21 +1,43 @@
 .errorTitle{
-    font-size: 288px;
+    font-size: 18rem;
     color: #FF6060;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 100px;
+    margin-top: 1.875rem;
+    margin-bottom: 6.25rem;
 }
 
 .errorMessage{
     color: #FF6060;
-    font-size: 36px;
+    font-size: 2.25rem;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 6.25rem;
 }
 
 .linkError{
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
     text-decoration: underline;
-    margin-bottom: 120px;
+    margin-bottom: 7.5rem;
+}
+
+/* Media queries pour adapter au mobile */
+@media (max-width: 480px) {
+    .errorTitle{
+        font-size: 6rem;
+        margin-top: 3rem;
+    }
+    .errorMessage{
+        font-size: 1.125rem;
+        word-break: break-word; 
+        max-width: 70%;
+        margin: auto;
+        margin-bottom: 6.25rem;
+    }
+    .linkError{
+        font-size: 0.875rem;
+        margin-bottom: 3.5rem;
+    }
+    .linkError:visited{
+        color: black;
+    }
 }

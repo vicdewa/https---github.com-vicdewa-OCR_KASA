@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './Collapse.css'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'; 
 
 function Collapse({ title, content }) {
 // Utilisation d'un state pour contrôler l'ouverture/la fermeture du composant Collapse //
@@ -16,16 +14,14 @@ function Collapse({ title, content }) {
     <div className="collapse-container">
       <div className="collapse-header">
         <h3>{title}</h3>
-        {/* Chevron qui tourne */}
-        <FontAwesomeIcon 
-          icon={faChevronUp} 
-          className={`collapse-chevron ${isOpen ? 'open' : ''}`} 
-          onClick={toggleCollapse}
+        <i 
+        onClick={toggleCollapse} 
+        className={`fa-solid fa-chevron-up collapse-chevron ${isOpen ? 'open' : ''}`}
         />
       </div>
       {/* Contenu qui se déploie avec une transition */}
       <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
-        <p>{content}</p>
+      {typeof content === 'string' ? <p>{content}</p> : content}
       </div>
     </div>
   );

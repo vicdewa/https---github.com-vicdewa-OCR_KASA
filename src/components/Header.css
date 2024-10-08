@@ -2,26 +2,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 3.125rem;
 }
   
 .header__logo{
-  width: 210px; 
-  height: 68px;
+  width: 13.125rem; 
+  height: 4.25rem;
 }
   
 .header__nav a {
   color: black;
   text-decoration: none;
   margin-left: 3rem;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
-.header__nav a:active{
-  text-decoration: underline;
-}
-
-.header__nav a:hover{
+.header__nav .active-link {
   text-decoration: underline;
 }
   
+/* Media queries pour adapter au mobile */
+@media (max-width: 480px) {
+  .header__logo{
+    max-width: 9.0625rem; 
+    height: auto;
+  }
+  .header__logo-image{
+    width: 100%;
+    object-fit: contain;
+  }
+  .header {
+    flex-direction: row;
+    padding: 1.5rem; 
+  }
+  .header__nav {
+    display: flex;
+    flex-direction: row; 
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .header__nav a {
+    margin-left: 0;
+    margin-bottom: 1rem; 
+    font-size: 0.75rem; 
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}

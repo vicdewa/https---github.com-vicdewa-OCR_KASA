@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../components/Banner';
-import homeImage from './Banner.png';
+import homeImage from '../assets/Banner.png';
 import Card from '../components/Card';
 import logements from '../data.json';  
 import './Home.css'; 

@@ -1,6 +1,6 @@
 footer{
     background-color: black;
-    height: 210px;
+    height: 13.125rem;
     color: white;
 }
 
@@ -12,10 +12,25 @@ footer{
 }
 
 p{
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .footer__logo{
-    width: 122px;
+    max-width: 7.625rem;
     filter: brightness(0) invert(1); 
+}
+
+/* Media queries pour adapter au mobile */
+@media (max-width: 480px) {
+    footer{
+        height: 10rem;
+        margin-top: 1.875rem;
+    }
+    .footer_right {
+        font-size: 0.75rem;
+        word-break: break-word; 
+        max-width: 30%;
+        margin: auto;
+        margin-top: 0.625rem;
+    }
 }

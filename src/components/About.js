@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../components/Banner'
-import aboutImage from './About.png';
+import aboutImage from '../assets/About.png';
 import Collapse from './Collapse';
 
 const About = () => {

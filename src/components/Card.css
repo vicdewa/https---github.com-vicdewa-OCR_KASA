@@ -1,15 +1,29 @@
 .card-grid{
     background-color: #F6F6F6;
-    width: 1240px;
+    width: 77.5rem;
     margin: auto;
     border-radius: 20px;
     margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(3, 340px);
-    gap: 60px; 
+    gap: 3.75rem; 
     justify-content: center; 
     padding: 20px; 
     overflow: hidden;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+}
+
+/* Media queries pour adapter au mobile */
+@media (max-width: 480px) {
+    .card-grid{
+        background-color: white;
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin: 0 auto;
+        gap: 2rem;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 2rem;
+    }
 }
