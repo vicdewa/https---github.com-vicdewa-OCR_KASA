@@ -79,4 +79,10 @@
     .collapse-container {
         margin-bottom: 10px;
     }
+    .collapse-content p {
+        font-size: 0.75rem;
+    }
+    .collapse-content.open {
+        font-size: 0.75rem;
+    }
 }

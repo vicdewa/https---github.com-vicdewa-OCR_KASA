@@ -25,6 +25,7 @@
         padding-left: none;
     }
 }
+
 /* Media queries pour adapter au mobile */
 @media (max-width: 600px) {
     .card-grid{
