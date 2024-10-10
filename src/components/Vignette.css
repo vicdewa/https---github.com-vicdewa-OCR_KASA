@@ -1,9 +1,10 @@
 .vignette{
     position: relative;
-    width: 21.25rem;
-    height: 21.25rem;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .vignette-title{
@@ -13,7 +14,7 @@
     z-index: 1;
     left: 0.625rem;
     width: 70%;
-    bottom: 0.3125rem;
+    bottom: 0rem;
     padding: 0.625rem;
 }
 
@@ -23,14 +24,32 @@
     object-fit: cover;
 }
 
-/* Media queries pour adapter au mobile */
-@media (max-width: 480px) {
+/* Media queries pour adapter à la tablette */
+@media (max-width: 1200px) {
     .vignette{
-        width:20.9375rem;
+        width:100%;
+        height: auto;
+    }
+    .vignette-title{
+        font-size: 1rem;
+        left: 1rem;
+        width: 90%;
+        bottom: 0rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Media queries pour adapter au mobile */
+@media (max-width: 600px) {
+    .vignette{
+        width: 100%;
+        margin: auto;
         height: 15.9375rem;
     }
     .vignette-title{
         bottom: 0rem;
+        left: 0.3rem;
         padding: 0.3rem;
+        position: absolute;
     }
 }

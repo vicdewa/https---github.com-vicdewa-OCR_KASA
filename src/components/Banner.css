@@ -1,7 +1,7 @@
 .banner{
     position: relative;
     width: 100%;
-    max-width: 77.5rem;
+    max-width: 90%;
     height: 14rem; 
     overflow: hidden;
     margin: auto;
@@ -23,7 +23,7 @@
 
 .banner-title{
     position: absolute; 
-    top: 25%; 
+    top: 20%; 
     left: 20%; 
     color: white; 
     font-size: 3rem;
@@ -38,6 +38,24 @@
     filter: opacity(0.8);
 }
 
+/* Media queries pour adapter à la tablette */
+@media (max-width: 1200px) {
+    .banner{
+        max-width: 90%;
+        max-height: 50%;
+    }
+    .banner-title{
+        flex-wrap: nowrap;
+        color: white; 
+        font-size: 2rem;
+        text-align: left;
+        z-index: 2; 
+        max-width: 90%;
+        top: 25%; 
+        left: 5%; 
+    }
+}
+
 /* Media queries pour adapter au mobile */
 @media (max-width: 480px) {
     .banner{
@@ -48,6 +66,7 @@
     .banner-title{
         font-size: 1.5rem;
         text-align: left;
+        max-width: 60%;
         top: 5%; 
         left: 5%; 
     }

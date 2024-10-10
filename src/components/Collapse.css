@@ -4,7 +4,7 @@
     overflow: hidden;
     width: 70%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
   }
   
@@ -25,6 +25,7 @@
 
 .collapse-header h3 {
     margin: 0;
+    font-size: 1.125rem;
 }
   
 /* Chevron qui pivote */
@@ -35,7 +36,7 @@
     transition: transform 0.3s ease;
     position: absolute; 
     right: 60px;
-    top: 30%;    
+    top: 25%;    
 }
   
 /* Rotation du chevron quand ouvert */
@@ -63,9 +64,19 @@
     font-size: 16px;
 }
 
-/* Media queries pour adapter au mobile */
-@media (max-width: 480px) {
+/* Media queries pour adapter au mobile/tablette */
+@media (max-width: 1200px) {
     .collapse-container {
         width: 90%;
+    }
+}
+
+/* Media queries pour adapter au mobile */
+@media (max-width: 480px) {
+    .collapse-header h3{
+        font-size: 0.8125rem;
+    }
+    .collapse-container {
+        margin-bottom: 10px;
     }
 }

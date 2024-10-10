@@ -20,6 +20,10 @@
     margin-bottom: 7.5rem;
 }
 
+.linkError a{
+    color: black;
+}
+
 /* Media queries pour adapter au mobile */
 @media (max-width: 480px) {
     .errorTitle{
@@ -37,7 +41,17 @@
         font-size: 0.875rem;
         margin-bottom: 3.5rem;
     }
-    .linkError:visited{
-        color: black;
+}
+
+/* Media queries pour adapter au mobile */
+@media (max-width: 1200px) {
+    .errorTitle{
+        font-size: 12rem;
+    }
+    .errorMessage{
+        font-size: 2rem;
+        max-width: 80%;
+        margin: auto;
+        margin-bottom: 6.25rem;
     }
 }
