@@ -1,16 +1,23 @@
 import React from 'react';
 import './Logement.css';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import data from '../data.json';
 import Collapse from './Collapse';
 import StarRating from './StarRating';
 
 const Logement = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  const [currentImage, setCurrentImage] = useState(0);
   const logement = data.find(logement => logement.id === id);
   
-  const [currentImage, setCurrentImage] = useState(0);
+  if (!logement) {
+    navigate('/error');
+    return null;
+  }
+  
   const pictures = logement.pictures;
 //Utilisation du modulo pour créer une boucle infinie//
   const nextImage = () => {
